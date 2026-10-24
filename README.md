@@ -25,6 +25,9 @@
 | [OneBlog](reviews/oneblog.md) | 研究自定义页面和存储组织的开发者 | 设计参考，暂不推荐直接作新底座 | 源码阅读 |
 | [WeBlog](reviews/weblog.md) | 学习Vue3表单与Java文章保存的开发者 | 教学参考，异步与日期边界需完善 | 源码阅读 |
 | [拾壹博客](reviews/shiyi-blog.md) | 有多端博客或社区互动需求的开发者 | 多端分工可参考，聊天能力需另验 | 源码阅读及官方截图 |
+| [Shoka风格博客应用](reviews/shoka-blog.md) | 研究文章阅读与评论运营的开发者 | 设计参考，不是可安装的Hexo主题 | 源码阅读 |
+| [MikuTools](reviews/mikutools.md) | 设计中文小工具平台的开发者 | 搜索与常用入口可参考，不作整站功能推荐 | 源码阅读及官方预览 |
+| [ClassFinal](reviews/classfinal.md) | 学习Java产物保护的开发者 | Agent与类加载原理参考，不作不可逆保护或机密保管方案 | 源码阅读 |
 
 ## Stretchly
 
