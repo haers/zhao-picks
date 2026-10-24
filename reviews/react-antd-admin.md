@@ -1,40 +1,19 @@
-# React Antd Admin：保留选型入口，不再收一套后台
+# React Antd Admin：Ant Design后台的选型候选
 
-> 评估日期：2026-10-23；类型：源码与已有采用对照的选型评测。官方演示只验到登录，未完整体验，不作为成品或全功能推荐。
+[原项目](https://github.com/condorheroblog/react-antd-admin) · [Demo](https://condorheroblog.github.io/react-antd-admin/) · [文档](https://condorheroblog.github.io/react-antd-admin/docs/)
 
-React Antd Admin 是基于 Ant Design 和 React 的后台前端模板。本次取舍是只保留评测、文档和源码链接，不保留本地完整副本，也不创建个人 Fork。原因是没有确认的新增采用需求，并非项目太老或不值得学习。
+## 适合谁
 
-| 项目 | 信息 |
-| --- | --- |
-| 上游 | [condorheroblog/react-antd-admin](https://github.com/condorheroblog/react-antd-admin) |
-| 官方体验 | [Demo](https://condorheroblog.github.io/react-antd-admin/) |
-| 官方文档 | [文档入口](https://condorheroblog.github.io/react-antd-admin/docs/) |
-| 原副本版本 | [7ec0bd20ade123db8bc30340b6b6c6c52691496d](https://github.com/condorheroblog/react-antd-admin/tree/7ec0bd20ade123db8bc30340b6b6c6c52691496d) |
-| 当日此前核对版本 | [9283fa021c7362676696fb7116715e69a60c2742](https://github.com/condorheroblog/react-antd-admin/tree/9283fa021c7362676696fb7116715e69a60c2742)，2026-10-04；本次未再次联网查更新 |
-| 许可 | [MIT](https://github.com/condorheroblog/react-antd-admin/blob/7ec0bd20ade123db8bc30340b6b6c6c52691496d/LICENSE) |
+已决定使用Ant Design，需要多页签、页面缓存、主题和表单示例的后台开发者。
 
-## 能力与适用范围
+## 价值与不足
 
-AntD 6、React 19、权限菜单、KeepAlive多页签、主题联动和表单示例，是值得看文档和源码的部分。此前上游核对还记录了树表单全选/展开与布局重复渲染修复，不能仅因本地快照较旧就认定项目停更或不适合现代环境。
+权限菜单、KeepAlive、主题联动和表单组织值得比较。它是前端基础，不自动提供业务数据库、真实后端授权或生产运维。
 
-它的定位是后台前端底座，不自动提供真实后端授权、业务数据、数据库与生产运维。与另外两个后台参考相比，选择重点不同：
+演示只体验到登录，后续表格、权限和手机交互未验证。因此不能把较完整的功能目录当作全功能可靠性结论。
 
-| 对象 | 值得看的侧重点 | 本次选择 |
-| --- | --- | --- |
-| shadcn-admin | 较轻的后台界面、列表与表单组合 | 已有独立样板时，不因新的壳出现就替换 |
-| Slash Admin | 权限反馈、动态菜单、看板等较完整前端交互 | 保留独立样板供对照，仍有mock局限 |
-| React Antd Admin | 明确选择AntD体系时的多页签、缓存、主题和表单组织 | 保留选型链接，有具体需求再取所需版本 |
+## 结论
 
-这不是按功能数量排高低。已有后台底座和AntD示例时，第三套完整应用会增加维护、试运行和重复对照成本。某个项目也用AntD，并不意味着需要增加登录墙、多页签和偏好中心；它们应服务具体业务需求。
+可列入AntD后台选型候选。若需求只有简单列表和表单，应先判断是否真的需要多页签与缓存带来的复杂度。
 
-## 为什么旧副本也不用保留
-
-当前没有明确的新增采用目标，固定源码链接已经足够支持将来的阅读或重新检出。已有业务应保存自己的实现和配置；仅供查阅的上游模板无需因此再维护一个个人仓。
-
-## 验证边界与停止点
-
-此前官方Demo使用公开预填账号登录成功，跳转到`#/home`；之后控制接口连续超时，按有限恢复规则停止。不能把登录成功写成桌面/手机、表格、权限或持久化已通过，也不能把工具超时直接写成网站故障。
-
-本次复审停在价值初筛：当前没有确认的增量需求，版本、源码对照及已有能力已经足以决定不新增本地仓。没有重试浏览器、安装依赖、运行后台或创建测试用户。
-
-未来若明确需要AntD管理台或KeepAlive缓存，再检查届时的上游版本和具体功能；采用某个组件时保留来源与许可。这份评测用于帮助选择，不构成已经接入业务的承诺。
+依据：源码阅读及2026-10-23有限演示体验；结论更新2026-10-24。上游MIT。
