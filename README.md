@@ -38,6 +38,7 @@
 | [PIG](reviews/pig.md) | 比较Java后台单体与微服务方案的开发者 | 现代后台选型候选，开源/商业版需区分，未试用 | 源码阅读 |
 | [RuoYi Shiro](reviews/ruoyi-shiro.md) | 用Java服务端模板开发管理页面的开发者 | 传统单体后台选型与设计参考，未试用 | 源码阅读及官方历史截图 |
 | [RuoYi-Vue](reviews/ruoyi-vue.md) | 接受Java＋Vue配套契约的后台开发者 | 优先选官方Vue3，注意页面耦合，未试用内部流程 | 源码阅读、演示登录页及官方图 |
+| [Vben Admin](reviews/vben-admin.md) | 准备整体采用Vue后台工程的开发者 | 表单与工程组织值得参考，仓内包依赖较重，未实测 | 源码阅读及官方历史预览 |
 
 ## 选型专题
 
