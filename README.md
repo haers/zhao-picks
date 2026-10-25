@@ -4,12 +4,14 @@
 
 收录分为“初步推荐”“学习/设计参考”和“暂不推荐”。试用与源码阅读会分别标注，收录不代表功能全部验收，也不要求读者Star或Fork。
 
+首页只保留索引，每个收录条目的介绍与结论都在独立文档中。单项目与跨项目选型专题分开列出。
+
 ## 项目结论
 
 | 项目 | 适合谁 / 主要用途 | 结论 | 依据 |
 | --- | --- | --- | --- |
-| [Stretchly](#stretchly) | 需要电脑休息提醒的人 | 已试用，初步推荐 | 初步试用 |
-| [shadcn-admin](#shadcn-admin) | 选择React后台界面基础的开发者 | 推荐学习与选型；不是完整业务后台 | 实际试用 |
+| [Stretchly](reviews/stretchly.md) | 需要电脑休息提醒的人 | 已试用，初步推荐 | 初步试用 |
+| [shadcn-admin](reviews/shadcn-admin.md) | 选择React后台界面基础的开发者 | 推荐学习与选型；不是完整业务后台 | 实际试用 |
 | [Toolkits](reviews/toolkits.md) | 临时合并普通PDF | PDF有限可用；九宫格暂不推荐 | 定向试用 |
 | [Clarity](reviews/clarity.md) | Nuxt Content博客及长教程作者 | 内容展示设计值得参考 | 有限试用 |
 | [Slash Admin](reviews/slash-admin.md) | 学习权限反馈、看板与后台布局的开发者 | 交互样板值得参考，业务后端需自建 | 实际试用 |
@@ -19,8 +21,6 @@
 | [getFavicon](reviews/favicon-api.md) | 自行实现站点图标获取的开发者 | 实现参考，不建议原样匿名公网部署 | 源码阅读 |
 | [RuoYi Blog](reviews/ruoyi-blog.md) | 希望结合博客、记账与个人记录的开发者 | 功能选型候选，不作成熟记账软件推荐 | 源码阅读 |
 | [NBlog](reviews/nblog.md) | 学习Java博客后端和通知流程的开发者 | 教学参考，不优先作为新项目底座 | 源码阅读 |
-| [My-Blog两版](reviews/my-blog-comparison.md) | 学习Java单体博客的开发者 | 按业务链路或Layui交互选学习方向 | 源码阅读及官方截图 |
-| [NotionNext / Wisp / MDX](reviews/blog-content-sources.md) | 正在选择博客内容管理方式的人 | 先选内容来源，再选模板 | 源码阅读及部分官方截图 |
 | [ThriveX](reviews/thrivex.md) | 关注相册、旅行足迹和个人表达的人 | 设计候选，注意后端与地图依赖 | 源码阅读 |
 | [OneBlog](reviews/oneblog.md) | 研究自定义页面和存储组织的开发者 | 设计参考，暂不推荐直接作新底座 | 源码阅读 |
 | [WeBlog](reviews/weblog.md) | 学习Vue3表单与Java文章保存的开发者 | 教学参考，异步与日期边界需完善 | 源码阅读 |
@@ -31,29 +31,17 @@
 | [AI Vocabulary Builder](reviews/ai-vocabulary-builder.md) | 英文阅读者与个人学习工具开发者 | 语境生词本候选及学习流程参考，尚未试用 | 源码阅读 |
 | [BibiGPT / v1源码](reviews/bibigpt-v1.md) | 想了解视频重点的人、研究内容摘要的开发者 | 官网选型线索与v1设计参考，尚未试用 | 源码阅读 |
 
-## Stretchly
+## 选型专题
 
-[Stretchly](https://github.com/hovancik/stretchly)用于提醒电脑使用者定时休息，支持macOS、Windows和Linux。
-
-**结论：已试用，初步推荐。** 适合容易久坐、希望在工作时收到休息提醒的人。支持短休息、长休息及偏好设置；目前是初步体验，尚无长期使用结论，也未逐项验证所有选项。
-
-[官方网站](https://hovancik.net/stretchly) · [官方下载](https://github.com/hovancik/stretchly/releases) · [个人Fork](https://github.com/haers/zhao-stretchly)
-
-原项目BSD-2-Clause许可。个人Fork未修改上游功能，更新与下载优先参考原项目。最近体验：2026-10-21。
-
-## shadcn-admin
-
-[shadcn-admin](https://github.com/satnaing/shadcn-admin)是React后台界面样板，适合查看表格、筛选、表单和导航如何组合。
-
-**结论：推荐学习与选型，不作为完整业务后台推荐。** 仪表盘、任务搜索、用户弹窗和手机侧栏已作定向试用。手机表格仍需横向查看，部分提示有截短；新增用户示例不保存真实数据，登录、权限、持久化和业务接口需要另行实现。
-
-[官方Demo](https://shadcn-admin.netlify.app/) · [个人Fork](https://github.com/haers/zhao-shadcn-admin)
-
-上游MIT许可，保留Sat Naing署名。最近体验：2026-10-23；不代表所有页面或长期稳定性已验收。
+| 专题 | 适合谁 / 主要用途 | 结论 | 依据 |
+| --- | --- | --- | --- |
+| [My-Blog两版比较](reviews/my-blog-comparison.md) | 学习Java单体博客的开发者 | 按业务链路或Layui交互选学习方向 | 源码阅读及官方截图 |
+| [NotionNext / Wisp / MDX](reviews/blog-content-sources.md) | 正在选择博客内容管理方式的人 | 先选内容来源，再选模板 | 源码阅读及部分官方截图 |
 
 ## 如何收录
 
 - 面向读者回答：做什么、适合谁、值得看什么、主要不足、最终建议。
+- 每个项目或选型专题对应一篇独立的 `reviews/*.md`；首页只放简短索引，不重复项目详情。
 - 用简短的“实际试用 / 有限试用 / 源码阅读”和日期说明依据，不把源码有实现写成体验已通过。
 - 只发布有公共参考价值的结论；不写私人项目情况、源码去留、账号配置、文件比对、调试过程或清理记录。
 - 不以项目数量或Star排名替代判断。相近方案可以合并比较，不为每个看过的项目凑文章。
@@ -63,7 +51,7 @@
 
 结论卡片建议格式：项目与来源、适合谁、主要价值、主要不足、最终建议、依据与日期。
 
-维护检查：运行 `python3 scripts/check-content.py`，检查常见隐私模式、结论卡片边界和仓内文件链接。图片、事实与第三方授权仍需人工核对。
+维护检查：运行 `python3 scripts/check-content.py`，检查常见隐私模式、结论卡片边界、仓内文件链接与索引结构。索引必须与独立文档一一对应，不使用首页项目锚点，也不遗漏文档。检查器回归运行 `python3 -m unittest discover -s scripts -p 'test_*.py'`。图片、事实与第三方授权仍需人工核对。
 
 ## 许可与致谢
 
