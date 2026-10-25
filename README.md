@@ -32,6 +32,9 @@
 | [ClassFinal](reviews/classfinal.md) | 学习Java产物保护的开发者 | Agent与类加载原理参考，不作不可逆保护或机密保管方案 | 源码阅读 |
 | [AI Vocabulary Builder](reviews/ai-vocabulary-builder.md) | 英文阅读者与个人学习工具开发者 | 语境生词本候选及学习流程参考，尚未试用 | 源码阅读 |
 | [BibiGPT / v1源码](reviews/bibigpt-v1.md) | 想了解视频重点的人、研究内容摘要的开发者 | 官网选型线索与v1设计参考，尚未试用 | 源码阅读 |
+| [mall-tiny](reviews/mall-tiny.md) | 学习Java账号与资源授权的开发者 | 权限脚手架学习参考，不是完整商城 | 源码阅读 |
+| [AgileBoot](reviews/agileboot.md) | 学习Java业务规则与数据权限测试的开发者 | 局部设计参考，不优先作现代后台底座 | 源码阅读 |
+| [DailyCheckIn](reviews/dailycheckin.md) | 有明确平台任务需求的Python开发者 | 有条件的选型与任务组织参考，未实测 | 源码阅读 |
 
 ## 选型专题
 
