@@ -37,6 +37,7 @@
 | [DailyCheckIn](reviews/dailycheckin.md) | 有明确平台任务需求的Python开发者 | 有条件的选型与任务组织参考，未实测 | 源码阅读 |
 | [PIG](reviews/pig.md) | 比较Java后台单体与微服务方案的开发者 | 现代后台选型候选，开源/商业版需区分，未试用 | 源码阅读 |
 | [RuoYi Shiro](reviews/ruoyi-shiro.md) | 用Java服务端模板开发管理页面的开发者 | 传统单体后台选型与设计参考，未试用 | 源码阅读及官方历史截图 |
+| [RuoYi-Vue](reviews/ruoyi-vue.md) | 接受Java＋Vue配套契约的后台开发者 | 优先选官方Vue3，注意页面耦合，未试用内部流程 | 源码阅读、演示登录页及官方图 |
 
 ## 选型专题
 
