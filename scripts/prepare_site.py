@@ -2,6 +2,7 @@
 """从公开索引与正文生成Jekyll输入；不把维护目录整仓发布。"""
 
 import json
+from html import escape
 from pathlib import Path
 import re
 import shutil
@@ -23,10 +24,31 @@ def index_entries(text: str) -> list[dict]:
         match = re.match(r"\| \[([^]]+)\]\((reviews/[^)]+\.md)\) \|", line)
         if match:
             title, filename = match.groups()
-            entries.append({"title": title, "file": filename, "slug": Path(filename).stem, "parent": "项目目录" if section == "项目结论" else "选型专题"})
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) != 4 or not cells[3]:
+                raise ValueError("索引必须包含项目、用途、结论、依据四列")
+            entries.append({"title": title, "file": filename, "slug": Path(filename).stem, "parent": "项目目录" if section == "项目结论" else "选型专题", "evidence": cells[3]})
     if len({entry["file"] for entry in entries}) != len(entries):
         raise ValueError("索引出现重复正文")
     return entries
+
+
+def evidence_label(evidence: str) -> str:
+    """逐字保留索引依据；源码阅读使用紫色，其余依据使用默认蓝色标签，不扩大验证范围。"""
+    color = " label-purple" if "源码阅读" in evidence else ""
+    return f'<span class="label{color}">{escape(evidence)}</span>'
+
+
+def label_table(table: str) -> str:
+    """仅装饰索引的依据列，结论与链接仍由README拥有。"""
+    lines = []
+    for line in table.splitlines():
+        if re.match(r"\| \[", line):
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            cells[3] = evidence_label(cells[3])
+            line = "| " + " | ".join(cells) + " |"
+        lines.append(line)
+    return "\n".join(lines)
 
 
 def front_matter(**values) -> str:
@@ -101,22 +123,25 @@ def prepare(root: Path = ROOT) -> dict:
             raise ValueError("正文包含需要显式处理的Liquid raw结束标记")
         path.write_text(front_matter(**metadata) + "{% raw %}\n" + body + "\n{% endraw %}\n")
 
-    home = readme.split("## 如何收录")[0]
+    home = readme.split("## 项目结论")[0]
     home = re.sub(r"^\[阅读网站\].*\n", "", home, flags=re.M)
+    home = re.sub(r"^首页只保留索引.*\n", "", home, flags=re.M)
     home = rewrite_links(home, root / "README.md", root, baseurl, entries, assets)
+    home += f'\n[浏览项目]({baseurl}/projects/){{: .btn .btn-purple }}\n[选型专题]({baseurl}/topics/){{: .btn }}\n'
     write("index.md", home, title="精选首页", nav_order=1, permalink="/")
     for title, filename, permalink, order in [("项目目录", "projects.md", "/projects/", 2), ("选型专题", "topics.md", "/topics/", 3)]:
         section = "项目结论" if title == "项目目录" else "选型专题"
         table = readme.split("## " + section + "\n", 1)[1].split("\n## ", 1)[0]
-        body = f"# {title}\n\n" + rewrite_links(table, root / "README.md", root, baseurl, entries, assets)
+        body = f"# {title}\n\n" + rewrite_links(label_table(table), root / "README.md", root, baseurl, entries, assets)
         write(filename, body, title=title, nav_order=order, has_children=True, has_toc=False, permalink=permalink)
     search_entries = []
     for order, entry in enumerate(entries, 1):
         source = root / entry["file"]
         body = rewrite_links(source.read_text(), source, root, baseurl, entries, assets)
-        back = "/projects/" if entry["parent"] == "项目目录" else "/topics/"
-        context = f'<div class="page-context"><a href="{baseurl}/">精选首页</a> / <a href="{baseurl}{back}">{entry["parent"]}</a></div>\n\n'
-        write(entry["file"], context + body, title=entry["title"], parent=entry["parent"], nav_order=order, permalink=f"/reviews/{entry['slug']}/", description=entry["title"] + "：用途、价值、限制与结论。")
+        # 详情只保留主题原生面包屑；依据放在标题之后，不重复返回导航。
+        heading, separator, rest = body.partition("\n")
+        body = heading + "\n\n" + evidence_label(entry["evidence"]) + "\n" + separator + rest
+        write(entry["file"], body, title=entry["title"], parent=entry["parent"], nav_order=order, permalink=f"/reviews/{entry['slug']}/", description=entry["title"] + "：用途、价值、限制与结论。")
         plain = re.sub(r"!?\[([^]]*)\]\([^)]+\)", r"\1", source.read_text())
         plain = re.sub(r"<[^>]+>|[#*`|]", " ", plain)
         search_entries.append({"title": entry["title"], "url": f"{baseurl}/reviews/{entry['slug']}/", "text": re.sub(r"\s+", " ", plain).strip()})

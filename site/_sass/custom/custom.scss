@@ -21,8 +21,6 @@ $picks-active: mix($picks-accent, $body-background-color, 12%);
 .main-content .table-wrapper { border: 1px solid $picks-border; border-radius: 8px; box-shadow: none; }
 .main-content p, .main-content li { line-height: 1.85; }
 .main-content h2 { margin-top: 2rem; }
-.page-context { padding: .7rem 1rem; margin-bottom: 1.7rem; background: $sidebar-color; border-left: 3px solid $picks-accent; border-radius: 3px; font-size: .85rem; }
-.page-context a { text-decoration: none; }
 .search-input { font-family: inherit; }
 .picks-search { position: relative; flex: 1; min-width: 0; padding: .5rem 1rem; }
 .picks-search input { width: 100%; border: 1px solid $picks-border; border-radius: 6px; padding: .6rem .8rem; background: $search-background-color; font: inherit; font-size: .9rem; color: $body-text-color; }
@@ -50,3 +48,7 @@ $picks-active: mix($picks-accent, $body-background-color, 12%);
   .picks-directory td:first-child { font-size: 1rem; font-weight: 650; }
   .picks-directory td:first-child::before { display: none; }
 }
+
+// 长依据标签在手机上可换行，原文不裁切。
+.main-content .label { white-space: normal; line-height: 1.6; }
+.main-content a.btn-purple { color: $white; }

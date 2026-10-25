@@ -32,10 +32,19 @@ class SitePreparation(unittest.TestCase):
         stage = self.root / 'work/site-src'
         self.assertFalse((stage / 'AGENTS.md').exists())
         self.assertFalse((stage / 'scripts').exists())
-        self.assertIn('/demo/reviews/example/', (stage / 'index.md').read_text())
+        self.assertNotIn('/demo/reviews/example/', (stage / 'index.md').read_text())
+        self.assertIn('/demo/projects/){: .btn .btn-purple }', (stage / 'index.md').read_text())
+        self.assertIn('/demo/reviews/example/', (stage / 'projects.md').read_text())
+        self.assertIn('<span class="label">阅读</span>', (stage / 'projects.md').read_text())
+        self.assertNotIn('page-context', (stage / 'reviews/example.md').read_text())
         self.assertIn('parent: "项目目录"', (stage / 'reviews/example.md').read_text())
         self.assertIn('值得阅读', (stage / 'search.json').read_text())
         self.assertNotIn('Not a reader', (stage / 'search.json').read_text())
+
+    def test_evidence_is_not_promoted_and_is_escaped(self):
+        self.assertIn('源码阅读，尚未试用', builder.evidence_label('源码阅读，尚未试用'))
+        self.assertIn('label-purple', builder.evidence_label('源码阅读'))
+        self.assertIn('&lt;script&gt;', builder.evidence_label('<script>'))
 
     def test_rewrite_assets_and_preserve_external_links(self):
         image = self.root / 'assets/example.svg'
