@@ -28,6 +28,8 @@
 | [Shoka风格博客应用](reviews/shoka-blog.md) | 研究文章阅读与评论运营的开发者 | 设计参考，不是可安装的Hexo主题 | 源码阅读 |
 | [MikuTools](reviews/mikutools.md) | 设计中文小工具平台的开发者 | 搜索与常用入口可参考，不作整站功能推荐 | 源码阅读及官方预览 |
 | [ClassFinal](reviews/classfinal.md) | 学习Java产物保护的开发者 | Agent与类加载原理参考，不作不可逆保护或机密保管方案 | 源码阅读 |
+| [AI Vocabulary Builder](reviews/ai-vocabulary-builder.md) | 英文阅读者与个人学习工具开发者 | 语境生词本候选及学习流程参考，尚未试用 | 源码阅读 |
+| [BibiGPT / v1源码](reviews/bibigpt-v1.md) | 想了解视频重点的人、研究内容摘要的开发者 | 官网选型线索与v1设计参考，尚未试用 | 源码阅读 |
 
 ## Stretchly
 
