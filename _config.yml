@@ -5,8 +5,9 @@ baseurl: /zhao-picks
 lang: zh-CN
 theme: just-the-docs
 permalink: pretty
-logo: /assets/brand.svg
+logo: /assets/brand.svg?v=purple-book-1
 favicon_ico: /assets/favicon.svg
+picks_asset_version: purple-book-1
 search_enabled: false
 heading_anchors: true
 nav_sort: case_insensitive

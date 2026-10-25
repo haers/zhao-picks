@@ -1,37 +1,38 @@
-$picks-green: #234c3b;
+$picks-accent: $link-color;
+$picks-border: mix($body-text-color, $body-background-color, 22%);
+$picks-active: mix($picks-accent, $body-background-color, 12%);
 
-body { color: #29332f; }
-.side-bar { background: #f5f7f4; border-right: 1px solid #d5dcd5; }
+.side-bar { background: $sidebar-color; border-right: 1px solid $picks-border; }
 .site-title { padding-top: 1.2rem; padding-bottom: 1.2rem; }
 .site-logo { width: 100%; height: 42px; background-position: left center; }
 .site-header { min-height: 88px; }
-.main-content h1 { color: #193b2b; font-weight: 650; letter-spacing: -.03em; }
-.main-content a, .nav-list .nav-list-link, .search-result-doc-title { color: $picks-green; }
-.nav-list .nav-list-link.active { font-weight: 650; background: #e6ede6; }
+.main-content h1 { color: $body-heading-color; font-weight: 650; letter-spacing: -.03em; }
+.main-content a, .nav-list .nav-list-link, .search-result-doc-title { color: $picks-accent; }
+.nav-list .nav-list-link.active { font-weight: 650; background: $picks-active; }
 .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item > .nav-list-expander,
 .aux-nav .aux-nav-list-item a,
-.site-footer a { color: $picks-green; }
-.nav-list .nav-list-item .nav-list-link.active { background: #e6ede6; }
-.breadcrumb-nav-list-item a, .site-button { color: $picks-green; }
+.site-footer a { color: $picks-accent; }
+.nav-list .nav-list-item .nav-list-link.active { background: $picks-active; }
+.breadcrumb-nav-list-item a, .site-button { color: $picks-accent; }
 .main-content table { display: table; min-width: 650px; font-size: .875rem; }
-.main-content th { background: #edf2ec; color: #314639; }
-.main-content td, .main-content th { border-color: #d5dcd5; padding: .8rem; }
-.main-content .table-wrapper { border: 1px solid #d5dcd5; border-radius: 8px; box-shadow: none; }
+.main-content th { background: $sidebar-color; color: $body-heading-color; }
+.main-content td, .main-content th { border-color: $picks-border; padding: .8rem; }
+.main-content .table-wrapper { border: 1px solid $picks-border; border-radius: 8px; box-shadow: none; }
 .main-content p, .main-content li { line-height: 1.85; }
 .main-content h2 { margin-top: 2rem; }
-.page-context { padding: .7rem 1rem; margin-bottom: 1.7rem; background: #f0f5ee; border-left: 3px solid $picks-green; border-radius: 3px; font-size: .85rem; }
+.page-context { padding: .7rem 1rem; margin-bottom: 1.7rem; background: $sidebar-color; border-left: 3px solid $picks-accent; border-radius: 3px; font-size: .85rem; }
 .page-context a { text-decoration: none; }
 .search-input { font-family: inherit; }
 .picks-search { position: relative; flex: 1; min-width: 0; padding: .5rem 1rem; }
-.picks-search input { width: 100%; border: 1px solid #b9c8bc; border-radius: 6px; padding: .6rem .8rem; background: #fff; font: inherit; font-size: .9rem; color: #25382d; }
-.picks-search input:focus { outline: 2px solid #789d84; outline-offset: 2px; }
-.picks-search-results { position: absolute; z-index: 50; left: 1rem; right: 1rem; top: calc(100% - .2rem); max-height: 65vh; overflow-y: auto; background: #fff; border: 1px solid #b9c8bc; border-radius: 6px; box-shadow: 0 8px 18px #0001; }
+.picks-search input { width: 100%; border: 1px solid $picks-border; border-radius: 6px; padding: .6rem .8rem; background: $search-background-color; font: inherit; font-size: .9rem; color: $body-text-color; }
+.picks-search input:focus { outline: 2px solid $picks-accent; outline-offset: 2px; }
+.picks-search-results { position: absolute; z-index: 50; left: 1rem; right: 1rem; top: calc(100% - .2rem); max-height: 65vh; overflow-y: auto; background: $search-background-color; border: 1px solid $picks-border; border-radius: 6px; box-shadow: 0 8px 18px #0001; }
 .picks-search-results ul { padding: 0; margin: 0; list-style: none; }
-.picks-search-results a { display: block; padding: .8rem; border-bottom: 1px solid #e1e7e0; color: #234c3b; }
-.picks-search-results a:hover, .picks-search-results a:focus { background: #f0f5ee; }
-.picks-search-results span { display: block; margin-top: .35rem; font-size: .8rem; line-height: 1.6; color: #536255; }
-.picks-search-results p { padding: .8rem; font-size: .85rem; margin: 0; color: #536255; }
+.picks-search-results a { display: block; padding: .8rem; border-bottom: 1px solid $picks-border; color: $picks-accent; }
+.picks-search-results a:hover, .picks-search-results a:focus { background: $picks-active; }
+.picks-search-results span { display: block; margin-top: .35rem; font-size: .8rem; line-height: 1.6; color: $body-text-color; }
+.picks-search-results p { padding: .8rem; font-size: .85rem; margin: 0; color: $body-text-color; }
 @media (max-width: 49.99rem) {
   .side-bar + .main .main-header { display: flex; background: #fff; }
   .aux-nav { display: none; }
@@ -43,9 +44,9 @@ body { color: #29332f; }
   .main-content .picks-directory { display: block; min-width: 0; width: 100%; }
   .picks-directory thead { display: none; }
   .picks-directory tbody { display: block; }
-  .picks-directory tr { display: block; border: 1px solid #d5dcd5; border-radius: 8px; margin-bottom: .8rem; padding: .65rem .9rem; }
+  .picks-directory tr { display: block; border: 1px solid $picks-border; border-radius: 8px; margin-bottom: .8rem; padding: .65rem .9rem; }
   .picks-directory td { display: block; border: 0; padding: .3rem 0; min-width: 0; line-height: 1.7; }
-  .picks-directory td::before { content: attr(data-label); display: block; font-size: .7rem; color: #536255; }
+  .picks-directory td::before { content: attr(data-label); display: block; font-size: .7rem; color: $body-text-color; }
   .picks-directory td:first-child { font-size: 1rem; font-weight: 650; }
   .picks-directory td:first-child::before { display: none; }
 }
