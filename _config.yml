@@ -1,0 +1,27 @@
+title: Zhao Picks
+description: 开源项目的用途、适合人群、优缺点与结论。试用和源码阅读分别标注。
+url: https://haers.github.io
+baseurl: /zhao-picks
+lang: zh-CN
+theme: just-the-docs
+permalink: pretty
+logo: /assets/brand.svg
+favicon_ico: /assets/favicon.svg
+search_enabled: false
+heading_anchors: true
+nav_sort: case_insensitive
+nav_enabled: true
+aux_links:
+  GitHub 仓库: https://github.com/haers/zhao-picks
+aux_links_new_tab: true
+back_to_top: true
+back_to_top_text: 返回顶部
+footer_content: 'Zhao Picks · 试用与源码阅读分别标注。原创文字 MIT，第三方内容遵循原有许可。主题 <a href="https://just-the-docs.com/">Just the Docs</a>。'
+color_scheme: light
+enable_copy_code_button: true
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

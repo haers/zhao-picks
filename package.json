@@ -1,0 +1,7 @@
+{
+  "name": "zhao-picks-site-checks",
+  "private": true,
+  "type": "module",
+  "scripts": { "test:site": "node scripts/qa-site.mjs" },
+  "devDependencies": { "playwright-core": "1.61.1" }
+}

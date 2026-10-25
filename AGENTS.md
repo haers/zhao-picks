@@ -12,5 +12,7 @@
 - 保留真实上游链接及许可，区分原创文字与第三方素材权利；截图不得包含私人信息。
 - 宗教资料按README收录原则提示。
 - 修改后检查本地链接、公开文本隐私及提交范围；提交和推送按用户授权执行，不夹带其他工作。
+- 网站使用Jekyll与Just the Docs，README/reviews是唯一内容源；站点生成及发布边界见[网站维护](site/README.md)。不手改work产物、不把AGENTS/脚本/工作目录发布到网站。
+- 网站改动须运行生成、Jekyll构建、scripts/check_site.py；改交互或样式时按页面门禁实际验证桌面和手机。推送触发部署前核对产物与公开文件，不以构建成功代替线上验收。
 
 修改后运行 `python3 scripts/check-content.py`。修改检查器时另运行 `python3 -m unittest discover -s scripts -p 'test_*.py'`。脚本只能发现有限文本模式和结构问题，不能替代事实核对、图片像素和元数据审阅。
