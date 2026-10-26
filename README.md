@@ -39,6 +39,9 @@
 | [RuoYi Shiro](reviews/ruoyi-shiro.md) | 用Java服务端模板开发管理页面的开发者 | 传统单体后台选型与设计参考，未试用 | 源码阅读及官方历史截图 |
 | [RuoYi-Vue](reviews/ruoyi-vue.md) | 接受Java＋Vue配套契约的后台开发者 | 优先选官方Vue3，注意页面耦合，未试用内部流程 | 源码阅读、演示登录页及官方图 |
 | [Vben Admin](reviews/vben-admin.md) | 准备整体采用Vue后台工程的开发者 | 表单与工程组织值得参考，仓内包依赖较重，未实测 | 源码阅读及官方历史预览 |
+| [Flutter 书旗 Demo](reviews/flutter-shuqi.md) | 学习Flutter阅读分页与移动端页面的开发者 | TextPainter分页与页面组织可参考，Mock及未完成控件不能当现成阅读工具 | 源码阅读及官方历史截图 |
+| [Novel Front Web](reviews/novel-front-web.md) | 学习小说读者门户与作家端流程的Vue/Java开发者 | 业务职责与接口对接可参考，依赖配套后端，未实测 | 源码阅读 |
+| [Novel Plus](reviews/novel-plus.md) | 研究Java文学内容CMS与内容存储的开发者 | 整体选型及多模块/存储边界值得参考，未运行完整系统 | 源码阅读及官方历史截图 |
 
 ## 选型专题
 
