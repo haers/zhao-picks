@@ -13,6 +13,7 @@
 | 项目 | 适合谁 / 主要用途 | 结论 | 依据 |
 | --- | --- | --- | --- |
 | [Stretchly](reviews/stretchly.md) | 需要电脑休息提醒的人 | 已试用，初步推荐 | 初步试用 |
+| [BleachBit](reviews/bleachbit.md) | 希望清理Windows / Linux缓存、临时文件与使用痕迹的人 | 清理工具选型候选，尚未实测 | 官方文档核对 |
 | [shadcn-admin](reviews/shadcn-admin.md) | 选择React后台界面基础的开发者 | 推荐学习与选型；不是完整业务后台 | 实际试用 |
 | [Toolkits](reviews/toolkits.md) | 临时合并普通PDF | PDF有限可用；九宫格暂不推荐 | 定向试用 |
 | [Clarity](reviews/clarity.md) | Nuxt Content博客及长教程作者 | 内容展示设计值得参考 | 有限试用 |
