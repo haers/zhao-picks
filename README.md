@@ -43,6 +43,14 @@
 | [Flutter 书旗 Demo](reviews/flutter-shuqi.md) | 学习Flutter阅读分页与移动端页面的开发者 | TextPainter分页与页面组织可参考，Mock及未完成控件不能当现成阅读工具 | 源码阅读及官方历史截图 |
 | [Novel Front Web](reviews/novel-front-web.md) | 学习小说读者门户与作家端流程的Vue/Java开发者 | 业务职责与接口对接可参考，依赖配套后端，未实测 | 源码阅读 |
 | [Novel Plus](reviews/novel-plus.md) | 研究Java文学内容CMS与内容存储的开发者 | 整体选型及多模块/存储边界值得参考，未运行完整系统 | 源码阅读及官方历史截图 |
+| [中文停用词表](reviews/chinese-stopwords.md) | 做中文分词过滤、词频或检索预处理的开发者 | 候选词表参考，需按场景筛选，非分词工具 | 词表阅读 |
+| [GoFilm](reviews/gofilm.md) | 研究Go/Vue影视目录、选集与采集管理的开发者 | 源码设计参考；前端可构建，类型检查失败，整站未验 | 源码阅读/前端构建 |
+| [Nuxt Movies](reviews/nuxt-movies.md) | 学习Nuxt影视目录、详情和多语言页面的开发者 | 页面与交互设计参考；Nuxt4 nightly及TMDB/YouTube依赖需留意 | 源码/历史介绍图/上游CI |
+| [CIM](reviews/cim.md) | 学习Java/Netty长连接和跨节点消息路由的开发者 | 即时通讯源码架构参考，非成品聊天软件 | 源码阅读/官方架构图 |
+| [CoreUI免费Bootstrap后台](reviews/coreui-bootstrap-admin.md) | 使用HTML/Bootstrap或服务端模板开发管理台的人 | 开源模板选型参考，区分CoreUI依赖与PRO权益 | 源码/正式发布资料 |
+| [Blowfish](reviews/blowfish.md) | 用Hugo和Markdown维护博客/内容站的人 | 主题选型参考，搜索/多语言等阅读组件丰富，环境要求按版本核对 | 官方资料/实站配置阅读 |
+| [Force Push Secret Scanner](reviews/force-push-scanner.md) | 复查自有/获授权仓库已知强推事件的维护者 | 专项源码参考，依赖事件数据与TruffleHog，结果展示须受控 | 固定源码阅读/语法解析 |
+| [Spring Security OAuth2 Sample](reviews/spring-security-oauth2-sample.md) | 学习PKCE、JWK轮换、内省与授权同意流程的Java开发者 | 按专题阅读的源码参考，非现成身份平台，未运行完整流程 | 固定源码/官方同意页截图 |
 
 ## 选型专题
 
